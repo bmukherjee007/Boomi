@@ -14,11 +14,6 @@ boomiAccountID=$4
 atomName=$5
 deploymentName=$6
 
-echo "$boomiAuthenticationType"
-echo "$boomiUserEmailID"
-
-echo $@
-
 sudo apt-get update
 sudo apt install openjdk-8-jre-headless -y
 
@@ -33,7 +28,10 @@ wget -P /usr/local/boomi https://platform.boomi.com/atom/atom_install64.sh && ch
 if [ $1 = "Token" ]
 then
  echo "Install Atom using Token"
- sudo /usr/local/boomi/atom_install64.sh -q console -VinstallToken="$3" -VatomName="$5" -VaccountId="$4" -dir "/opt/boomi/"        
+ echo "Print Varaibles $1 $2 $3 $4 $5 $6"
+ echo "boomiAuthenticationType: $boomiAuthenticationType"
+ echo "boomiUserEmailID: $boomiUserEmailID"
+ sudo /usr/local/boomi/atom_install64.sh -q console -VinstallToken=$3 -VatomName=$5 -VaccountId=$4 -dir "/opt/boomi/"        
 else
  echo "Install Atom using Password"
  sudo /usr/local/boomi/atom_install64.sh -q console -Vusername="$2" -Vpassword="$3" -VatomName="$5" -VaccountId="$4" -dir "/opt/boomi/"        
