@@ -6,19 +6,10 @@ echo "boomiPasswordORboomiAPIToken:$3"
 echo "boomiAccountID:$4"
 echo "atomName:$5"
 echo "deploymentName:$6"
-#### Log the execution to a file ####
 
-#exec 3>&1 4>&2
-
-#trap 'exec 2>&4 1>&3' 0 1 2 3 RETURN
-
-#exec 1>/var/log/configure-bastion.log 2>&1
-
-#sudo yum -y install java-1.8.0-openjdk
 sudo apt-get update
 sudo apt install openjdk-8-jre-headless -y
 
-#sudo yum -y install wget
 sudo apt-get update
 sudo apt-get install wget
 
