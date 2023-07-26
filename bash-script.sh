@@ -24,7 +24,7 @@ then
  echo "Print Varaibles $1 $2 $3 $4 $5 $6"
  echo "boomiPasswordORboomiAPIToken: $boomiPasswordORboomiAPIToken"
  echo "atomName: $atomName"
- echo "boomiAccountID: $boomiAccountID"
+ echo "boomiAccountID: ${boomiAccountID}"
  sudo /usr/local/boomi/atom_install64.sh -q console -VinstallToken=$3 -VatomName=$5 -VaccountId=$4 -dir "/opt/boomi/"        
 else
  echo "Install Atom using Password"
