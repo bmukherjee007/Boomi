@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "boomiAuthenticationType:$1"
+echo "boomiUserEmailID:$2"
+echo "boomiPasswordORboomiAPIToken:$3"
+echo "boomiAccountID:$4"
+echo "atomName:$5"
+echo "deploymentName:$6"
 #### Log the execution to a file ####
 
 #exec 3>&1 4>&2
