@@ -14,6 +14,9 @@ boomiAccountID=$4
 atomName=$5
 deploymentName=$6
 
+echo "$boomiAuthenticationType"
+echo "$boomiUserEmailID"
+
 echo $@
 
 sudo apt-get update
@@ -27,7 +30,7 @@ wget -P /usr/local/boomi https://platform.boomi.com/atom/atom_install64.sh && ch
 
 #AuthType=$(echo "${boomiAuthenticationType}" | xargs)
 #AuthType=$(echo "$AuthType" | tr '[:lower:]' '[:upper:]')
-if [ "$1" -eq "Token" ]
+if [ "$1" == "Token" ]
 then
  echo "Install Atom using Token"
  sudo /usr/local/boomi/atom_install64.sh -q console -VinstallToken="$3" -VatomName="$5" -VaccountId="$4" -dir "/opt/boomi/"        
