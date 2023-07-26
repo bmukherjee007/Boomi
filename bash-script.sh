@@ -8,7 +8,10 @@ atomName=$5
 deploymentName=$6
 
 sudo apt-get update
-sudo apt install openjdk-8-jre-headless -y
+sudo dpkg -l | grep openjdk  
+sudo apt-get remove openjdk-8-jre-headless -y
+sudo apt-get install openjdk-8-jre -y
+#sudo apt install openjdk-8-jre-headless -y
 
 sudo apt-get update
 sudo apt-get install wget
