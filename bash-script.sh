@@ -7,6 +7,13 @@ echo "boomiAccountID:$4"
 echo "atomName:$5"
 echo "deploymentName:$6"
 
+boomiAuthenticationType=$1
+boomiUserEmailID=$2
+boomiPasswordORboomiAPIToken=$3
+boomiAccountID=$4
+atomName=$5
+deploymentName=$6
+
 echo $@
 
 sudo apt-get update
