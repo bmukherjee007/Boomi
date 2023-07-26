@@ -25,7 +25,7 @@ then
  echo "boomiPasswordORboomiAPIToken: $boomiPasswordORboomiAPIToken"
  echo "atomName: $atomName"
  echo "boomiAccountID: ${boomiAccountID}"
- sudo /usr/local/boomi/atom_install64.sh -q console -VinstallToken=$3 -VatomName=$5 -VaccountId=$4 -dir "/opt/boomi/"        
+ sudo /usr/local/boomi/atom_install64.sh -q console -VinstallToken="${boomiPasswordORboomiAPIToken}" -VatomName="${atomName}" -VaccountId="${boomiAccountID}" -dir "/opt/boomi/"        
 else
  echo "Install Atom using Password"
  sudo /usr/local/boomi/atom_install64.sh -q console -Vusername="$2" -Vpassword="$3" -VatomName="$5" -VaccountId="$4" -dir "/opt/boomi/"        
