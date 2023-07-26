@@ -29,5 +29,5 @@ then
 else
  #Password="$(gsutil cat gs://${deploymentName}-bucket/token.txt | head -1 | base64 --decode)"
  #gsutil rm gs://${deploymentName}-bucket/token.txt
- sudo /usr/local/boomi/atom_install64.sh -q console -Vusername=${boomiUserEmailID} -Vpassword=$Password -VatomName=${atomName} -VaccountId=${boomiAccountID} -dir "/opt/boomi/"        
+ sudo /usr/local/boomi/atom_install64.sh -q console -Vusername=${boomiUserEmailID} -Vpassword=${boomiPasswordORboomiAPIToken} -VatomName=${atomName} -VaccountId=${boomiAccountID} -dir "/opt/boomi/"        
 fi
