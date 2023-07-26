@@ -30,8 +30,7 @@ wget -P /usr/local/boomi https://platform.boomi.com/atom/atom_install64.sh && ch
 
 #AuthType=$(echo "${boomiAuthenticationType}" | xargs)
 #AuthType=$(echo "$AuthType" | tr '[:lower:]' '[:upper:]')
-if [ "$1" == "Token" ]
-then
+if [ "$1" == "Token" ]; then
  echo "Install Atom using Token"
  sudo /usr/local/boomi/atom_install64.sh -q console -VinstallToken="$3" -VatomName="$5" -VaccountId="$4" -dir "/opt/boomi/"        
 else
