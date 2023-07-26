@@ -20,7 +20,9 @@ AuthType=$(echo "${boomiAuthenticationType}" | xargs)
 #AuthType=$(echo "$AuthType" | tr '[:lower:]' '[:upper:]')
 if [ $AuthType = Token ]
 then
+ echo "Install Atom using Token"
  sudo /usr/local/boomi/atom_install64.sh -q console -VinstallToken="atom-2845082b-2167-4fe7-b9f1-f48a1be397e9" -VatomName="Test-Linux-Atom" -VaccountId="pwc-UWWBSP" -dir "/opt/boomi/"        
 else
+ echo "Install Atom using Password"
  sudo /usr/local/boomi/atom_install64.sh -q console -Vusername=${boomiUserEmailID} -Vpassword=${boomiPasswordORboomiAPIToken} -VatomName=${atomName} -VaccountId=${boomiAccountID} -dir "/opt/boomi/"        
 fi
