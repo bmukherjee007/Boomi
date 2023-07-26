@@ -25,7 +25,7 @@ if [ $AuthType = TOKEN ]
 then
  #TOKEN="$(gsutil cat gs://${deploymentName}-bucket/token.txt | head -1 | base64 --decode)"
  #gsutil rm gs://${deploymentName}-bucket/token.txt
- sudo /usr/local/boomi/atom_install64.sh -q console -VinstallToken=$TOKEN -VatomName=${atomName} -VaccountId=${boomiAccountID} -dir "/opt/boomi/"        
+ sudo /usr/local/boomi/atom_install64.sh -q console -VinstallToken=${boomiPasswordORboomiAPIToken} -VatomName=${atomName} -VaccountId=${boomiAccountID} -dir "/opt/boomi/"        
 else
  #Password="$(gsutil cat gs://${deploymentName}-bucket/token.txt | head -1 | base64 --decode)"
  #gsutil rm gs://${deploymentName}-bucket/token.txt
