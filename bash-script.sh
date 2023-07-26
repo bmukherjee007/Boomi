@@ -7,6 +7,8 @@ echo "boomiAccountID:$4"
 echo "atomName:$5"
 echo "deploymentName:$6"
 
+echo $@
+
 sudo apt-get update
 sudo apt install openjdk-8-jre-headless -y
 
