@@ -16,9 +16,8 @@
 sudo apt-get update
 sudo apt-get install wget
 
-wget -P /usr/local/boomi https://platform.boomi.com/atom/atom_install64.sh 
-#&& chmod +x /usr/local/boomi/atom_install64.sh
-chmod 777 /usr/local/boomi/atom_install64.sh
+wget -P /usr/local/boomi https://platform.boomi.com/atom/atom_install64.sh && chmod +x /usr/local/boomi/atom_install64.sh
+#chmod 777 /usr/local/boomi/atom_install64.sh
 
 AuthType=$(echo "${boomiAuthenticationType}" | xargs)
 AuthType=$(echo "$AuthType" | tr '[:lower:]' '[:upper:]')
