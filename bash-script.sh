@@ -1,12 +1,5 @@
 #!/bin/bash
 
-echo "boomiAuthenticationType:$1"
-echo "boomiUserEmailID:$2"
-echo "boomiPasswordORboomiAPIToken:$3"
-echo "boomiAccountID:$4"
-echo "atomName:$5"
-echo "deploymentName:$6"
-
 boomiAuthenticationType=$1
 boomiUserEmailID=$2
 boomiPasswordORboomiAPIToken=$3
@@ -29,8 +22,9 @@ if [ $1 = "Token" ]
 then
  echo "Install Atom using Token"
  echo "Print Varaibles $1 $2 $3 $4 $5 $6"
- echo "boomiAuthenticationType: $boomiAuthenticationType"
- echo "boomiUserEmailID: $boomiUserEmailID"
+ echo "boomiPasswordORboomiAPIToken: $boomiPasswordORboomiAPIToken"
+ echo "atomName: $atomName"
+ echo "boomiAccountID: $boomiAccountID"
  sudo /usr/local/boomi/atom_install64.sh -q console -VinstallToken=$3 -VatomName=$5 -VaccountId=$4 -dir "/opt/boomi/"        
 else
  echo "Install Atom using Password"
