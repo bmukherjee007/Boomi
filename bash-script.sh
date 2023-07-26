@@ -10,7 +10,7 @@ trap 'exec 2>&4 1>&3' 0 1 2 3 RETURN
 
 #sudo yum -y install java-1.8.0-openjdk
 sudo apt-get update
-sudo apt-get  install openjdk-8-jdk -y
+sudo apt install openjdk-8-jre-headless -y
 
 #sudo yum -y install wget
 sudo apt-get update
