@@ -15,8 +15,8 @@ echo "deploymentName:$6"
 #exec 1>/var/log/configure-bastion.log 2>&1
 
 #sudo yum -y install java-1.8.0-openjdk
-#sudo apt-get update
-#sudo apt install openjdk-8-jre-headless -y
+sudo apt-get update
+sudo apt install openjdk-8-jre-headless -y
 
 #sudo yum -y install wget
 sudo apt-get update
